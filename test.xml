@@ -1,9 +1,8 @@
 <test description="changeme">
-	<testSub number=1>
-	   	<testSubSub really="changeme2" />
+	<testSub whatever="1">
+	   	<testSubSub really="changeme2">
 	   	   changeme3
 		</testSubSub>
 	</testSub>
-	<testSub number=2>
-	</testSub>
+	<testSub whatever="2" />
 </test>
