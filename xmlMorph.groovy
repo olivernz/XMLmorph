@@ -10,7 +10,7 @@ import groovy.text.*
 import groovy.xml.*
 
 // 1st input parameter
-if (args.size > 1) {
+if (args.size() > 1) {
 	// XML filter class
 	def xmlConversionFile = args[0]
 
