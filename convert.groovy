@@ -7,18 +7,18 @@ class convert {
 
 	def convertXML(xml) {
 
-		xml.@chamgeme 						      = 'changed!'
-		xml.testSub.@number						  = 101
+		xml.@description = 'changed!'
+		xml.testSub.@whatever = 101
     
-    xml.with {
-      testSub.@number               = 1011
-    }
+    	xml.with {
+      		testSub.@whatever = 1011
+    	}
     
-		xml.testSub.with {
-			testSubSub.@changeme2         = 'changed!'
-      testSubSub                    = this.currentDate.format('dd/MM/yyyy')
-	  }
-	  return xml
+		xml.testSub[1].each {
+			testSubSub.@really = 'changed!'
+      		testSubSub.value = this.currentDate.format('dd-MM-yyyy')
+	 	}
+	 return xml
 	}
 
 }
